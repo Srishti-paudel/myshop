@@ -5,9 +5,9 @@
 .container{
     margin-top: 10vh;
     padding:20px;
-    margin-left: 10px;
+  
     height:90%;
-    width:80%;
+    width:98%;
     display: flex;
     background-color:white;
     box-shadow:0 4px 10px rgba(0,0,0,.15);
@@ -20,8 +20,13 @@
     gap:20px;
 }
 .products{
+    margin-left: 3px;
     height:fit-content;
     width:fit-content;
     border:2px solid white;
     box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+p{
+    gap:10px;
+    padding:10px;
 }
