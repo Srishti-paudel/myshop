@@ -38,7 +38,7 @@
     flex-wrap: wrap;
     padding:10px;
     background-color: white;
-    justify-content: space-between;
+    justify-content: space-evenly;
     box-shadow:0 4px 10px rgba(0,0,0,.5);
     bottom:0;
  }
@@ -53,7 +53,20 @@
     display: flex;
     flex-direction: column;
     gap:8px;
+    
  }
- 
-
+ .footer_links a{
+  text-decoration: none;
+  color:black;
+ }
+.container_collection{
+  position:absolute;
+  display: flex;
+  margin:20%;
+  top:5%;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: azure;
+}
 

@@ -1,47 +1,21 @@
-const slides = document.querySelector('.slides');
-const images = document.querySelectorAll('.slides img');
-
-let index = 0;
-let startX = 0;
-let isDragging = false;
-
-// Touch events (mobile)
-slides.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-});
-
-slides.addEventListener('touchend', (e) => {
-  let endX = e.changedTouches[0].clientX;
-  handleSwipe(startX, endX);
-});
-
-// Mouse events (desktop)
-slides.addEventListener('mousedown', (e) => {
-  startX = e.clientX;
-  isDragging = true;
-});
-
-slides.addEventListener('mouseup', (e) => {
-  if (!isDragging) return;
-  let endX = e.clientX;
-  handleSwipe(startX, endX);
-  isDragging = false;
-});
-
-function handleSwipe(start, end) {
-  let diff = start - end;
-
-  if (diff > 50) {
-    // swipe left
-    index++;
-  } else if (diff < -50) {
-    // swipe right
-    index--;
+var TrandingSlider = new Swiper('.tranding-slider', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  loop: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2.5,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   }
-
-  // boundaries
-  if (index < 0) index = 0;
-  if (index >= images.length) index = images.length - 1;
-
-  slides.style.transform = `translateX(-${index * 300}px)`;
-}
+});

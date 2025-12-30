@@ -30,3 +30,6 @@ p{
     gap:10px;
     padding:10px;
 }
+img{
+    object-fit: cover;
+}
