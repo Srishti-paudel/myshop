@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>waradly</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-
-</script>
+   
 </head>
 
 <body>
@@ -33,27 +31,30 @@
       
 </div>
 
+ <div class="slide-container">
+	
+	<div class="slides">
+		<img src="images/assets/p_img1.png" class="active">
+		<img src="images/assets/p_img10.png">
+		<img src="images/assets/p_img2.png">
+		<img src="images/assets/p_img3.png">
+		<img src="images/assets/p_img4.png">
+	</div>
 
- </div>
- <div class="container_collection">
-    <P>latest Collection</P>
-    <img src="images/leftarrow.png" class="arrow_left">
-    <div class="frame">
-        <div class="slider">
-        <img src="images/image.png" class="image"/>
-                <img src="images/image.png" class="image"/>
-                        <img src="images/image.png" class="image"/>
-                                <img src="images/image.png" class="image"/>
-                                        <img src="images/image.png" class="image"/>
-                                                <img src="images/image.png" class="image"/>
-                                                        <img src="images/image.png" class="image"/>
-                                                                <img src="images/image.png" class="image"/>
-                                                                
-        </div>
-    </div>
-         <img src="images/rightarrow.png" class="arrow_right">
+	<div class="buttons">
+		<span class="next">&#10095;</span>
+		<span class="prev">&#10094;</span>
+	</div>
 
- </div>
+	<div class="dotsContainer">
+		<div class="dot active" attr='0' onclick="switchImage(this)"></div>
+		<div class="dot" attr='1' onclick="switchImage(this)"></div>
+		<div class="dot" attr='2' onclick="switchImage(this)"></div>
+		<div class="dot" attr='3' onclick="switchImage(this)"></div>
+		<div class="dot" attr='4' onclick="switchImage(this)"></div>
+	</div>
+
+</div>
 <footer>
 <div class="footer">
 
