@@ -4,7 +4,7 @@
     background:#fff;
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:space-evenly;
     padding:0 40px;
     box-shadow:0 4px 10px rgba(0,0,0,.15);
     position:fixed;
@@ -33,11 +33,11 @@
     width:100%;
     border: 2px solid none;
     position:relative;
-    margin-top:180vh;
+    margin-top: 1;
     display:flex;
     flex-wrap: wrap;
     padding:10px;
-    background-color: white;
+    background-color:white;
     justify-content: space-evenly;
     box-shadow:0 4px 10px rgba(0,0,0,.5);
     bottom:0;
@@ -60,13 +60,32 @@
   color:black;
  }
 .container_collection{
+  width:100%;
   position:absolute;
-  display: flex;
-  margin:20%;
+  display:inline-flex ;
   top:5%;
   align-items: center;
   justify-content: center;
   height: 80vh;
   background-color: azure;
+ 
 }
+.arrow_left{
+  height: 150px;
+  cursor: pointer;
+}
+.arrow_right{
+  height: 150px;
+  cursor: pointer;
+}
+.frame {
+  width:80vh;
+  height:60vh;
 
+  overflow:hidden
+}
+.slider{
+  display :flex;
+  gap:20px;
+
+}
