@@ -33,6 +33,7 @@
 
 .slide-container{
      margin-top:100px;
+	 display:flex;
       position: relative;
 			width: 70%;
 			height: 70vh;
@@ -40,6 +41,7 @@
 			box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
       margin-left: 70px;
 		}
+		
 		.slide-container .slides{
 			width: 100%;
 			height: calc(100%);

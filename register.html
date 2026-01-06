@@ -6,15 +6,21 @@
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
      <link rel="stylesheet" href="register.css"> 
-</head>
-
+     <style>
+      #name_error,
+        #email_error,
+    #password_error {
+    font-style: italic;
+    color: red;
+    font-family: Calibri;
+}
+    </style>
+ </head>
 <body>
      <div class="navbar">
         <div class="logo">
            <img src="images/image.png" alt="logo"/>
         </div>
-
-       
         <div class="menu">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -32,14 +38,17 @@
         <form method="POST" onsubmit="return validate()">
             <label>UserName</label>
             <input type="text" placeholder="Full Name"  id="name">
+            <span id="name_error"></span>
              <label>E-mail</label>
             <input type="email" placeholder="Email"  id="email" required>
+            <span id="email_error"></span>
             <label>Password</label>
             <input type="password" placeholder="Password" id="password" required>
+            <span id="password_error"></span>
+            <input type="checkbox">I agree all the terms and condition</input>
             <button type="submit">Register</button>
             <p>Already have an account? <a href="login.html">Login</a></p>
         </form>
-
     </div>
 </div>
 <div class="footer">
@@ -60,9 +69,7 @@
         <div class="policies">
   <p>Return within 7 days</p>
    <p>Exchange within 7 days</p>
-    <p>Home delivery available</p>
-
-           
+    <p>Home delivery available</p>    
     </div>
     </div>
     <script>
@@ -72,16 +79,16 @@
             let email=document.getElementById('email').value
             
             let password=document.getElementById('password').value
-            if(name ===" "){
-            alert("please enter the name");
+            if(name.trim()===""){
+            document.getElementById('name_error').innerHTML="please enter the name properly";
             return false
             }
-             if(password ===" "||password.length<8){
-            alert("Password must be at least 8 characters long");
+             if(password.trim()===""||password.length<8){
+            document.getElementById('password_error').innerHTML="The password must be of at least 8 characters";
             return false
             }
-             if(email ===" "){
-            alert("please enter the name");
+             if(email.trim() ===""){
+            document.getElementById('email_error').innerHTML="Please enter a valid email";
             return false
             }
             return true;
