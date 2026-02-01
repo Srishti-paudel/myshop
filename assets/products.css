@@ -1,0 +1,35 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+.container{
+    margin-top: 10vh;
+    padding:20px;
+  
+    height:90%;
+    width:98%;
+    display: flex;
+    background-color:white;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+.product_container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+.products{
+    margin-left: 3px;
+    height:fit-content;
+    width:fit-content;
+    border:2px solid white;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+p{
+    gap:10px;
+    padding:10px;
+}
+img{
+    object-fit: cover;
+}
