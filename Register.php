@@ -5,15 +5,15 @@ include_once 'Navbar.php'
     <div class="container">
         <div class="form_box">
         <h2>Register</h2>
-        <form  action="#" method="post"  onsubmit="return validate()">
+        <form  action="register_process.php" method="post"  onsubmit="return validate()">
             <label>UserName</label>
-            <input type="text" placeholder="Full Name"  id="name">
+            <input type="text" placeholder="Full Name" name="username" id="name">
             <span id="name_error"></span>
              <label>E-mail</label>
-            <input type="email" placeholder="Email"  id="email" required>
+            <input type="email" placeholder="Email" name="email" id="email" required>
             <span id="email_error"></span>
             <label>Password</label>
-            <input type="password" placeholder="Password" id="password" required>
+            <input type="password" placeholder="Password" name="password" id="password" required>
             <span id="password_error"></span>
           
   <input type="checkbox" id="terms">
